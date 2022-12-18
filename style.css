@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    user-select: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: url(img/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.header{
+    width: 100%;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-profile{
+    display: flex;
+    align-items: center;
+}
+
+.header-profile img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.header-profile .profile-info h4{
+    font-size: 18px;
+}
+.header-profile .profile-info p{
+    font-size: 15px;
+    color: gray;
+}
+
+.header-icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-icons i{
+    margin-left: 20px;
+    font-size: 20px;
+    color: gray;
+    cursor: pointer;
+}
+
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+}
+
+.footer i{
+    margin-left: 20px;
+    font-size: 20px;
+    color: gray;
+    cursor: pointer;
+}
+.footer i:first-child{
+    margin-left: 0;
+    margin-right: 20px;
+}
+.footer i:last-child{
+    color: cornflowerblue;
+}
+
+.footer input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 16px;
+    color: black;
+}
+.footer input::placeholder{
+    font-size: 14px;
+    color: gray;
+}
+
+
+.section-chat{
+    width: 100%;
+    height: 83%;
+    padding: 5px 10px;
+    display: block;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.section-chat::-webkit-scrollbar{
+    width: 5px;
+}
+.section-chat::-webkit-scrollbar-thumb{
+    border-radius: 50px;
+    background: black;
+}
+.section-chat::-webkit-scrollbar-track{
+    background: gray;
+}
+
+.section-chat div{
+    width: 100%;
+    padding: 5px 10px;
+    margin-top: 5px;
+    position: relative;
+}
+
+.section-chat .my-chat{
+    text-align: right;
+}
+
+.section-chat span{
+    font-size: 17px;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+.section-chat .comp-chat span{
+    background: white;
+}
+.section-chat .my-chat span{
+    background: lawngreen;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+
+.section-chat .my-chat span.active{
+    margin-right: 2%;
+}
+
+.section-chat .my-chat .fa-trash{
+    font-size: 20px;
+    color: gray;
+    cursor: pointer;
+    transition: all .3s linear;
+    position: absolute;
+    right: -7%;
+}
+.section-chat .my-chat .fa-trash:hover{
+    color: red;
+}
+.section-chat .my-chat span.active ~ .fa-trash{
+    right: 0%;
+}
